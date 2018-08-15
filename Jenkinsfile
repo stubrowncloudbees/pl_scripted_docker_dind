@@ -16,6 +16,7 @@ podTemplate(label: label,
                     sh 'docker login -p ${PASSWORD} -u ${USER}'
                     sh "docker build . -t $image_name"
                     sh "docker push $image_name"
+                    sh "sleep 200"
 
                 }
             }
